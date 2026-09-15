@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusBite | Cart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Campus<span>Bite</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="index.html#how-it-works">
+                    How It Works
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+
+                <a href="cart.html" class="cart-button active">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart
+                    <span id="cart-count">0</span>
+                </a>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CART HERO ================= -->
+
+    <section class="menu-hero">
+
+        <div class="container">
+
+            <span class="section-label">
+                YOUR ORDER
+            </span>
+
+            <h1>
+                Your Cart
+            </h1>
+
+            <p>
+                Review your items and choose a pickup time.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CART ================= -->
+
+    <section class="section cart-section">
+
+        <div class="container">
+
+
+            <!-- EMPTY CART -->
+
+            <div id="empty-cart" class="empty-cart">
+
+                <div class="feature-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+
+                <h2>
+                    Your cart is empty
+                </h2>
+
+                <p>
+                    Looks like you haven't added anything yet.
+                </p>
+
+                <a href="menu.html" class="primary-button">
+                    Browse Menu →
+                </a>
+
+            </div>
+
+
+            <!-- CART CONTENT -->
+
+            <div id="cart-content" class="cart-layout">
+
+
+                <!-- CART ITEMS -->
+
+                <div class="cart-items-container">
+
+                    <div class="cart-heading">
+
+                        <div>
+
+                            <span class="section-label">
+                                ORDER ITEMS
+                            </span>
+
+                            <h2>
+                                Your Items
+                            </h2>
+
+                        </div>
+
+                        <span id="cart-item-count">
+                            0 items
+                        </span>
+
+                    </div>
+
+
+                    <div id="cart-items">
+                    </div>
+
+
+                    <a href="menu.html"
+                       class="continue-shopping">
+
+                        ← Continue Shopping
+
+                    </a>
+
+                </div>
+
+
+                <!-- SUMMARY -->
+
+                <div class="cart-summary">
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Items
+                        </span>
+
+                        <strong id="summary-item-count">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong>
+                            ₹<span id="cart-subtotal">0</span>
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Service Charge
+                        </span>
+
+                        <strong>
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong>
+                            ₹<span id="cart-total">0</span>
+                        </strong>
+
+                    </div>
+
+
+                    <!-- PICKUP -->
+
+                    <div class="pickup-section">
+
+                        <h3>
+                            ⏰ Choose Pickup Time
+                        </h3>
+
+                        <p>
+                            Select a convenient time to collect
+                            your order.
+                        </p>
+
+
+                        <div class="pickup-options">
+
+                            <label class="pickup-option">
+
+                                <input
+                                    type="radio"
+                                    name="pickup-time"
+                                    value="10:00 AM - 10:30 AM"
+                                >
+
+                                <span>
+                                    10:00 AM - 10:30 AM
+                                </span>
+
+                            </label>
+
+
+                            <label class="pickup-option">
+
+                                <input
+                                    type="radio"
+                                    name="pickup-time"
+                                    value="11:00 AM - 11:30 AM"
+                                >
+
+                                <span>
+                                    11:00 AM - 11:30 AM
+                                </span>
+
+                            </label>
+
+
+                            <label class="pickup-option">
+
+                                <input
+                                    type="radio"
+                                    name="pickup-time"
+                                    value="12:00 PM - 12:30 PM"
+                                >
+
+                                <span>
+                                    12:00 PM - 12:30 PM
+                                </span>
+
+                            </label>
+
+
+                            <label class="pickup-option">
+
+                                <input
+                                    type="radio"
+                                    name="pickup-time"
+                                    value="1:00 PM - 1:30 PM"
+                                >
+
+                                <span>
+                                    1:00 PM - 1:30 PM
+                                </span>
+
+                            </label>
+
+
+                            <label class="pickup-option">
+
+                                <input
+                                    type="radio"
+                                    name="pickup-time"
+                                    value="2:00 PM - 2:30 PM"
+                                >
+
+                                <span>
+                                    2:00 PM - 2:30 PM
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CUSTOMER -->
+
+                    <div class="customer-details">
+
+                        <h3>
+                            👤 Your Details
+                        </h3>
+
+
+                        <input
+                            type="text"
+                            id="customer-name"
+                            placeholder="Enter your name"
+                        >
+
+
+                        <input
+                            type="text"
+                            id="customer-class"
+                            placeholder="Class / Section" 
+                        >
+
+                        <input
+                            type="tel"
+                            id="customer-phone"
+                            placeholder="Enter your phone number"
+                            maxlength="10"
+                        >
+
+                    </div>
+
+                    <!-- PAYMENT OPTIONS -->
+
+<div class="payment-section">
+
+    <h3>💳 Payment Method</h3>
+
+    <label class="payment-option">
+        <input
+            type="radio"
+            name="payment"
+            value="UPI"
+        >
+        📱 UPI
+    </label>
+
+    <label class="payment-option">
+        <input
+            type="radio"
+            name="payment"
+            value="Pay at Canteen"
+        >
+        🏫 Pay at Canteen
+    </label>
+
+    <label class="payment-option">
+        <input
+            type="radio"
+            name="payment"
+            value="Cash on Pickup"
+        >
+        💵 Cash on Pickup
+    </label>
+
+</div>
+
+
+                    <button
+                        class="checkout-button"
+                        onclick="placeOrder()">
+
+                        Place Pre-Order →
+
+                    </button>
+
+
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ORDER SUCCESS ================= -->
+
+    <div id="order-modal" class="order-modal">
+
+        <div class="order-modal-content">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Order Confirmed!
+            </h2>
+
+            <p>
+                Your CampusBite pre-order has been placed
+                successfully.
+            </p>
+
+
+            <div class="order-details">
+
+                <div>
+
+                    <span>
+                        Order ID
+                    </span>
+
+                    <strong id="order-id">
+                        CB0000
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Pickup Time
+                    </span>
+
+                    <strong id="confirmed-pickup">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong>
+                        ₹<span id="confirmed-total">
+                            0
+                        </span>
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <p class="pickup-message">
+
+                Please collect your order from the
+                campus canteen at your selected time.
+
+            </p>
+
+
+            <a href="index.html"
+               class="primary-button">
+
+                Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    Campus<span>Bite</span>
+                </a>
+
+                <p>
+                    Skip the queue. Enjoy your meal.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CampusBite. College Mini Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

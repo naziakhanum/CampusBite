@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusBite | Menu</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Campus<span>Bite</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html" class="active">
+                    Menu
+                </a>
+
+                <a href="index.html#how-it-works">
+                    How It Works
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+            <a href="cart.html" class="cart-button">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span id="cart-count">0</span>
+            </a>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MENU HERO ================= -->
+
+    <section class="menu-hero">
+
+        <div class="container">
+
+            <span class="section-label">
+                CAMPUS CANTEEN
+            </span>
+
+            <h1>
+                What are you craving?
+            </h1>
+
+            <p>
+                Choose your favourite food and pre-order it
+                before heading to the canteen.
+            </p>
+
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="menu-search"
+                    placeholder="Search food..."
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+
+    <section class="section menu-section">
+
+        <div class="container">
+
+
+            <!-- FILTERS -->
+
+            <div class="filter-bar">
+
+                <button
+                    class="filter-button active"
+                    onclick="filterMenu('all')">
+
+                    All
+
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    onclick="filterMenu('snacks')">
+
+                    Snacks
+
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    onclick="filterMenu('meals')">
+
+                    Meals
+
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    onclick="filterMenu('beverages')">
+
+                    Beverages
+
+                </button>
+
+            </div>
+
+
+            <!-- FOOD GRID -->
+
+            <div class="food-grid">
+
+
+                <!-- 1 -->
+
+                <div class="food-card"
+                     data-category="snacks">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/sandwich.jpg"
+                             alt="Veg Sandwich">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>
+                            Veg Sandwich
+                        </h3>
+
+                        <p>
+                            Fresh vegetables with tasty filling.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹50
+                            </strong>
+
+                            <button onclick="addToCart(1)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2 -->
+
+                <div class="food-card"
+                     data-category="meals">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/biryani.jpg"
+                             alt="Veg Biryani">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Meals
+                        </span>
+
+                        <h3>
+                            Veg Biryani
+                        </h3>
+
+                        <p>
+                            Aromatic rice cooked with vegetables
+                            and spices.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹80
+                            </strong>
+
+                            <button onclick="addToCart(2)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 3 -->
+
+                <div class="food-card"
+                     data-category="snacks">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/samosa.jpg"
+                             alt="Samosa">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>
+                            Samosa
+                        </h3>
+
+                        <p>
+                            Crispy snack with spicy potato filling.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹20
+                            </strong>
+
+                            <button onclick="addToCart(3)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 4 -->
+
+                <div class="food-card"
+                     data-category="snacks">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/masala-dosa.jpg"
+                             alt="Masala Dosa">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>
+                            Masala Dosa
+                        </h3>
+
+                        <p>
+                            Crispy dosa served with potato masala.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹60
+                            </strong>
+
+                            <button onclick="addToCart(4)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 5 -->
+
+                <div class="food-card"
+                     data-category="meals">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/fried-rice.jpg"
+                             alt="Veg Fried Rice">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Meals
+                        </span>
+
+                        <h3>
+                            Veg Fried Rice
+                        </h3>
+
+                        <p>
+                            Flavourful rice tossed with fresh vegetables.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹70
+                            </strong>
+
+                            <button onclick="addToCart(5)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 6 -->
+
+                <div class="food-card"
+                     data-category="beverages">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/juice.jpg"
+                             alt="Fresh Juice">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Beverages
+                        </span>
+
+                        <h3>
+                            Fresh Juice
+                        </h3>
+
+                        <p>
+                            Refreshing fruit juice served chilled.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹40
+                            </strong>
+
+                            <button onclick="addToCart(6)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 7 -->
+
+                <div class="food-card"
+                     data-category="beverages">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/cold-coffee.jpg"
+                             alt="Cold Coffee">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Beverages
+                        </span>
+
+                        <h3>
+                            Cold Coffee
+                        </h3>
+
+                        <p>
+                            Creamy and refreshing chilled coffee.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹50
+                            </strong>
+
+                            <button onclick="addToCart(7)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 8 -->
+
+                <div class="food-card"
+                     data-category="snacks">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/fries.jpg"
+                             alt="French Fries">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>
+                            French Fries
+                        </h3>
+
+                        <p>
+                            Crispy golden fries with seasoning.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹50
+                            </strong>
+
+                            <button onclick="addToCart(8)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 9 -->
+
+                <div class="food-card"
+                     data-category="beverages">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/coffee.jpg"
+                             alt="Coffee">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Beverages
+                        </span>
+
+                        <h3>
+                            Coffee
+                        </h3>
+
+                        <p>
+                            Hot and comforting campus coffee.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹20
+                            </strong>
+
+                            <button onclick="addToCart(9)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 10 -->
+
+                <div class="food-card"
+                     data-category="beverages">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/tea.jpg"
+                             alt="Tea">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Beverages
+                        </span>
+
+                        <h3>
+                            Tea
+                        </h3>
+
+                        <p>
+                            Freshly prepared hot tea.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹15
+                            </strong>
+
+                            <button onclick="addToCart(10)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 11 -->
+
+                <div class="food-card"
+                     data-category="snacks">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/idli.jpg"
+                             alt="Idli">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>
+                            Idli
+                        </h3>
+
+                        <p>
+                            Soft steamed idlis served fresh.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹40
+                            </strong>
+
+                            <button onclick="addToCart(11)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 12 -->
+
+                <div class="food-card"
+                     data-category="snacks">
+
+                    <div class="menu-food-image">
+
+                        <img src="images/icecream.jpg"
+                             alt="Ice Cream">
+
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>
+                            Ice Cream
+                        </h3>
+
+                        <p>
+                            Cool and creamy dessert for a sweet treat.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹30
+                            </strong>
+
+                            <button onclick="addToCart(12)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    Campus<span>Bite</span>
+                </a>
+
+                <p>
+                    Skip the queue. Enjoy your meal.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CampusBite. College Mini Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

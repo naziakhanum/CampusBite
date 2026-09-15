@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusBite | Skip the Queue</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Campus<span>Bite</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <a href="cart.html" class="cart-button">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span id="cart-count">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="hero-tag">
+                    🍴 Campus Food Made Easy
+                </span>
+
+                <h1>
+                    Skip the Queue.
+                    <span>Enjoy Your Meal.</span>
+                </h1>
+
+                <p>
+                    Order your favourite campus food in advance,
+                    choose your pickup time and collect your meal
+                    without waiting in long queues.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="menu.html" class="primary-button">
+                        Explore Menu →
+                    </a>
+
+                    <a href="#how-it-works" class="secondary-button">
+                        How It Works
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-food-icon">
+                    🍛
+                </div>
+
+                <div class="hero-card-content">
+
+                    <span>Today's Special</span>
+
+                    <h3>Veg Biryani</h3>
+
+                    <p>
+                        Fresh • Delicious • Ready for Pickup
+                    </p>
+
+                    <strong>₹80</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    WHY CAMPUSBITE?
+                </span>
+
+                <h2>
+                    Food ordering made simple
+                </h2>
+
+                <p>
+                    Spend less time waiting and more time enjoying
+                    your college life.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🔍</div>
+
+                    <h3>Browse Menu</h3>
+
+                    <p>
+                        Explore all available food and drinks
+                        from your campus canteen.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+
+                    <h3>Add to Cart</h3>
+
+                    <p>
+                        Select your favourite items and choose
+                        the quantity you need.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">⏰</div>
+
+                    <h3>Choose Pickup</h3>
+
+                    <p>
+                        Select a convenient pickup slot before
+                        heading to the canteen.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">⚡</div>
+
+                    <h3>Skip the Queue</h3>
+
+                    <p>
+                        Collect your prepared order quickly
+                        and get back to your classes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= POPULAR FOOD ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <div class="section-heading section-heading-row">
+
+                <div>
+
+                    <span class="section-label">
+                        STUDENT FAVOURITES
+                    </span>
+
+                    <h2>
+                        Popular at CampusBite
+                    </h2>
+
+                </div>
+
+                <a href="menu.html" class="view-menu-link">
+                    View Full Menu →
+                </a>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <!-- Sandwich -->
+
+                <div class="food-card">
+
+                    <div class="menu-food-image">
+                        <img src="images/sandwich.jpg"
+                             alt="Veg Sandwich">
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>Veg Sandwich</h3>
+
+                        <p>
+                            Fresh vegetables with tasty filling.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹50</strong>
+
+                            <button onclick="addToCart(1)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Biryani -->
+
+                <div class="food-card">
+
+                    <div class="menu-food-image">
+                        <img src="images/biryani.jpg"
+                             alt="Veg Biryani">
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Meals
+                        </span>
+
+                        <h3>Veg Biryani</h3>
+
+                        <p>
+                            Aromatic rice cooked with vegetables
+                            and spices.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹80</strong>
+
+                            <button onclick="addToCart(2)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dosa -->
+
+                <div class="food-card">
+
+                    <div class="menu-food-image">
+                        <img src="images/masala-dosa.jpg"
+                             alt="Masala Dosa">
+                    </div>
+
+                    <div class="menu-food-info">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>Masala Dosa</h3>
+
+                        <p>
+                            Crispy dosa served with potato masala.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹60</strong>
+
+                            <button onclick="addToCart(4)">
+                                + Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-section" id="how-it-works">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    Order in 4 simple steps
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">01</div>
+
+                    <h3>Browse</h3>
+
+                    <p>
+                        Check the available campus food menu.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">02</div>
+
+                    <h3>Add to Cart</h3>
+
+                    <p>
+                        Select your favourite food items.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">03</div>
+
+                    <h3>Choose Time</h3>
+
+                    <p>
+                        Select when you want to collect your order.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">04</div>
+
+                    <h3>Pick Up</h3>
+
+                    <p>
+                        Collect your order from the canteen.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section about" id="about">
+
+        <div class="container about-content">
+
+            <div class="about-text">
+
+                <span class="section-label">
+                    ABOUT CAMPUSBITE
+                </span>
+
+                <h2>
+                    Built for students,
+                    made for convenience.
+                </h2>
+
+                <p>
+                    CampusBite is a campus food pre-order system
+                    designed to make canteen ordering faster and
+                    more convenient for students.
+                </p>
+
+                <p>
+                    Students can browse the menu, place an order
+                    and select a pickup time instead of spending
+                    their break standing in a queue.
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <div class="about-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Made for Campus Life
+                </h3>
+
+                <p>
+                    Simple ordering. Less waiting.
+                    More time for what matters.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="section contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CONTACT
+                </span>
+
+                <h2>
+                    Have a question?
+                </h2>
+
+                <p>
+                    We'd love to hear from you.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📧
+                    </div>
+
+                    <h3>Email</h3>
+
+                    <p>
+                        campusbite@example.com
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <h3>Location</h3>
+
+                    <p>
+                        Campus Canteen
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        🕐
+                    </div>
+
+                    <h3>Pickup Hours</h3>
+
+                    <p>
+                        10:00 AM – 4:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    Campus<span>Bite</span>
+                </a>
+
+                <p>
+                    Skip the queue. Enjoy your meal.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CampusBite. College Mini Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
