@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBite | Staff Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-login-page">
+
+    <div class="admin-login-container">
+
+        <a href="index.html" class="logo">
+            Campus<span>Bite.</span>
+        </a>
+
+        <div class="admin-login-card">
+            <div class="admin-login-icon">👋</div>
+
+            <h1>Welcome Back!</h1>
+            <p class="admin-login-subtitle">
+                Staff Login — Sign in to manage CampusBite.
+            </p>
+
+            <form id="adminLoginForm">
+                <div class="login-form-group">
+                    <label for="adminUsername">Username</label>
+                    <input
+                        type="text"
+                        id="adminUsername"
+                        placeholder="Enter your username"
+                        required
+                    >
+                </div>
+
+                <div class="login-form-group">
+                    <label for="adminPassword">Password</label>
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <p id="loginError" class="login-error"></p>
+
+                <button type="submit" class="admin-login-btn">
+                    Login to Dashboard
+                </button>
+            </form>
+
+            <a href="index.html" class="login-back-link">
+                ← Back to CampusBite
+            </a>
+        </div>
+
+        <p class="admin-login-footer">
+            CampusBite Staff Portal © 2026
+        </p>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

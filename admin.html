@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBite | Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="admin-page">
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-brand">
+                <a href="index.html" class="logo">
+                    Campus<span>Bite.</span>
+                </a>
+                <p>STAFF PANEL</p>
+            </div>
+
+            <nav class="admin-nav">
+                <a href="#dashboard" class="admin-nav-link active">📊 Dashboard</a>
+                <a href="#active-section" class="admin-nav-link">📦 Active Orders</a>
+                <a href="#completed-section" class="admin-nav-link">✅ Completed Orders</a>
+                <a href="#cancelled-section" class="admin-nav-link">❌ Cancelled Orders</a>
+                <a href="#food-management" class="admin-nav-link">🍔 Food Management</a>
+                
+            </nav>
+
+            <div class="admin-sidebar-bottom">
+
+                <a href="index.html">← Back to Website</a>
+            
+                <button
+                    type="button"
+                    class="admin-logout-btn"
+                    onclick="adminLogout()">
+                    ↪ Logout
+                </button>
+            
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="admin-main" id="dashboard">
+
+            <header class="admin-topbar">
+                <div>
+                    <h2>Dashboard Overview</h2>
+                    <p>Welcome to CampusBite Staff Dashboard!</p>
+                </div>
+
+                
+            </header>
+
+
+            <!-- SUMMARY CARDS -->
+            <section class="admin-dashboard-section">
+
+                <div class="admin-dashboard-heading">
+                    <h2>Overview</h2>
+                    <p>Here's what's happening with your orders.</p>
+                </div>
+
+                <div class="admin-summary" id="admin-summary"></div>
+
+            </section>
+
+
+            <!-- ACTIVE ORDERS -->
+            <section class="admin-dashboard-section" id="active-section">
+
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Active Orders</h2>
+                        <p>Orders that need attention.</p>
+                    </div>
+
+                    <span id="active-orders-count"></span>
+                </div>
+
+                <div id="admin-active-orders"></div>
+
+            </section>
+
+
+            <!-- COMPLETED ORDERS -->
+            <section class="admin-dashboard-section" id="completed-section">
+
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Completed Orders</h2>
+                        <p>Orders successfully collected.</p>
+                    </div>
+
+                    <span id="completed-orders-count"></span>
+                </div>
+
+                <div id="admin-completed-orders"></div>
+
+            </section>
+
+
+            <!-- CANCELLED ORDERS -->
+            <section class="admin-dashboard-section" id="cancelled-section">
+
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Cancelled Orders</h2>
+                        <p>Orders cancelled by students or staff.</p>
+                    </div>
+
+                    <span id="cancelled-orders-count"></span>
+                </div>
+
+                <div id="admin-cancelled-orders"></div>
+
+            </section>
+
+
+            <!-- FUTURE FEATURES -->
+            <!-- FOOD MANAGEMENT -->
+<section class="admin-dashboard-section" id="food-management">
+
+    <div class="admin-section-heading">
+        <div>
+            <h2>Food Management</h2>
+            <p>Add and manage your CampusBite menu.</p>
+        </div>
+    </div>
+
+    <!-- ADD NEW FOOD FORM -->
+    <div class="add-food-form">
+
+        <h3>➕ Add New Food Item</h3>
+
+        <form id="add-food-form">
+
+            <div class="food-form-grid">
+
+                <div class="form-group">
+                    <label for="food-name">Food Name</label>
+                    <input type="text" id="food-name"
+                        placeholder="Enter food name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="food-price">Price (₹)</label>
+                    <input type="number" id="food-price"
+                        placeholder="Enter price" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="food-category">Category</label>
+                    <select id="food-category" required>
+                        <option value="">Select Category</option>
+                        <option value="Snacks">Snacks</option>
+                        <option value="Meals">Meals</option>
+                        <option value="Beverages">Beverages</option>
+                        <option value="Desserts">Desserts</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="food-image">Image URL</label>
+                    <input type="url" id="food-image"
+                        placeholder="Paste image URL">
+                </div>
+
+            </div>
+
+            <button type="submit" class="add-food-submit-btn">
+                Add Food Item
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- EXISTING FOOD ITEMS -->
+    <div class="food-management-list" id="admin-food-list">
+    </div>
+
+</section>
+
+
+            
+
+                
+            </section>
+
+
+            <footer class="admin-footer">
+                CampusBite Staff Dashboard © 2026
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
